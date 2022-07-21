@@ -7,6 +7,7 @@ function showTime(){
     
     if(h == 0){
         h = 12;
+        session= ' Am'
     }
     
     if(h > 12){
@@ -14,6 +15,11 @@ function showTime(){
         session = "PM";
     }
     
+    if (h<12){
+        session = 'Am'
+    } else{
+        session = 'PM'
+    }
     h = (h < 10) ? "0" + h : h;
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
